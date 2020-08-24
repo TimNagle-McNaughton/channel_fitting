@@ -1,4 +1,4 @@
-## Batch fits quadratic lines to channel profiles extracted from DEMs
+## Batch fits quadratic lines to profiles extracted from DEMs
 
 ### Package requirements:
 
