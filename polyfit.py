@@ -1,18 +1,32 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 ### imports
 import arcpy
 import matplotlib.pyplot as plt
+
+get_ipython().run_line_magic('matplotlib', 'inline')
+
 import glob
 import numpy as np
 import pandas as pd
+
 print("Imports complete.")
 
 
+# In[ ]:
+
+
 ### setup
+
 # DEM to extract profiles from
 dem = "C:/Git_repos/channel_fitting/test_dem.tif" 
 
 # put single-profile shapefiles in this folder, preferably with useful names
-output_shapefile_folder = "C:/Git_repos/channel_fitting/shapefiles/"
+shapefile_folder = "C:/Git_repos/channel_fitting/shapefiles/"
 
 # each profile will generate a corresponding X, Y table in this folder
 output_table_folder = "C:/Git_repos/channel_fitting/tables/"
@@ -26,16 +40,18 @@ output_textfile = "C:/Git_repos/channel_fitting/polyfit_values.csv"
 print("Variables set.")
 
 
+# In[ ]:
+
+
 ### run the stack profile
 # check out 3D analyst
 arcpy.CheckOutExtension("3D")
 
 # get a list of shapefiles to process
-shapefile_list = glob.glob(output_shapefile_folder + "*.shp")
+shapefile_list = glob.glob(shapefile_folder + "*.shp")
 
 # loop through each shapefile
 for shapefile in shapefile_list:
-    
     # get name
     out_name = arcpy.Describe(shapefile).basename
     
@@ -51,11 +67,15 @@ arcpy.CheckInExtension("3D")
 print("Profile tables generated.")
 
 
-### process the tables  
+# In[ ]:
+
+
+### process the tables
+    
 # write the header -- WILL OVERWRITE
 with open(output_textfile, "w") as output:
     output.write("table, a, b, c, residuals \n")
- 
+    
 # get a list of all the tables to process
 table_list = glob.glob(output_table_folder + "*.csv")
 
