@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20200824</CreaDate><CreaTime>08191900</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\3D Analyst Tools.tbx\StackProfile" Date="20200824" Time="081919">StackProfile C:/Git_repos/channel_fitting/shapefiles\test_profile.shp C:/Git_repos/channel_fitting/test_dem.tif C:\Git_repos\channel_fitting\tables\test_profile.csv #</Process></lineage></DataProperties></Esri></metadata>
