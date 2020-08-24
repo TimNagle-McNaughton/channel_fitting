@@ -23,19 +23,19 @@ print("Imports complete.")
 ### setup
 
 # DEM to extract profiles from
-dem = "C:/Git_repos/channel_fitting/test_dem.tif" 
+dem = "/channel_fitting/test_dem.tif" 
 
 # put single-profile shapefiles in this folder, preferably with useful names
-shapefile_folder = "C:/Git_repos/channel_fitting/shapefiles/"
+shapefile_folder = "/channel_fitting/shapefiles/"
 
 # each profile will generate a corresponding X, Y table in this folder
-output_table_folder = "C:/Git_repos/channel_fitting/tables/"
+output_table_folder = "/channel_fitting/tables/"
 
 # each profile will be saved as a figure with the fitted line in this folder
-output_figure_folder = "C:/Git_repos/channel_fitting/figures/"
+output_figure_folder = "/channel_fitting/figures/"
 
 # the name and location of the textfile that will log the final data
-output_textfile = "C:/Git_repos/channel_fitting/polyfit_values.csv"
+output_textfile = "channel_fitting/polyfit_values.csv"
 
 print("Variables set.")
 
